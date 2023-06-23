@@ -9,10 +9,13 @@
         "/src/components/*"
       ],
       "@/layout/*": [
-        "/layout/*"
+        "/src/layout/*"
       ],
       "@/styles/*": [
-        "/styles/*"
+        "/src/styles/*"
+      ],
+      "@/public/*": [
+        "/public/*"
       ],
     }
   }
