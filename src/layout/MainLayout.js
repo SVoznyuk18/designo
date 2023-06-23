@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "@/components/Header/Header";
 
 const MainLayout = ({children, title}) => {
   return (
@@ -10,6 +11,7 @@ const MainLayout = ({children, title}) => {
           content='practice Next.js'
         />
       </Head>
+      <Header/>
       {children}       
     </>
   );

@@ -1,0 +1,113 @@
+@import '@/styles/variables.scss';
+
+.nav {
+  &_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 368px;
+  }
+
+  &_link {
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    color: $primary_black;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .menu {
+    &_btn {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+      cursor: pointer;
+
+      span {
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #222222;
+        transition: all 0.5s;
+
+        &:nth-of-type(2) {
+          top: calc(50% - 5px);
+        }
+
+        &:nth-of-type(3) {
+          top: calc(50% + 5px);
+        }
+      }
+
+      &__active {
+        span {
+          &:nth-of-type(1) {
+            display: none;
+          }
+
+          &:nth-of-type(2) {
+            top: 50%;
+            transform: translate(-50%, 0%) rotate(45deg);
+          }
+
+          &:nth-of-type(3) {
+            top: 50%;
+            transform: translate(-50%, 0%) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .nav {
+    position: fixed;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #8e8e8f;
+    z-index: -9999;
+
+    &__active {
+      height: 100%;
+      z-index: 9999;
+    }
+
+    &_list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      width: 100%;
+      height: auto;
+      background: $primary_black;
+    }
+
+    &_link {
+      font-size: 24px;
+      line-height: 25px;
+      height: 0;
+      padding: 0 32px;
+      overflow: hidden;
+      transition: height, margin 0.5s;
+
+      a {
+        color: $primary_white;
+      }
+
+      &__active {
+        height: 25px;
+        margin: 32px 0;
+      }
+    }
+  }
+}
