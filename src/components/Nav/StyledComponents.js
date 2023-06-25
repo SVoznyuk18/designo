@@ -2,14 +2,18 @@ import styled, {css} from "styled-components";
 
 import {media, colors} from "@/configs/index";
 
-
 export const Navigation = styled.nav`
+  width: 60%;
+
+  ${media.mobile} {
+    width: 100%;
+  }
+
   ${props => props.popUpMenu && css`
     ${media.mobile} {
       position: fixed;
       top: 96px;
       left: 0;
-      width: 100%;
       height: 0;
       background-color: ${colors.primary_black};
       z-index: -9999;
@@ -30,7 +34,7 @@ export const NavigationList = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 368px;
+  width: 100%;
 
   ${media.mobile} {
     padding: 48px 24px;
@@ -43,6 +47,8 @@ export const NavigationList = styled.ul`
 
     ${props => !props.popUpMenu && css`
       background-color: transparent;
+      align-items: center;
+      padding: 0;
   `}
   }
 `;
@@ -55,13 +61,13 @@ export const NavigationItem = styled.li`
   
   a {
     color: ${colors.primary_black};
-
-    ${props => !props.popUpMenu && css`
-      a {
-        color: ${colors.primary_white};
-      }
-    `}
   }
+
+  ${props => !props.popUpMenu && css`
+    a {
+      color: ${colors.primary_white};
+    }
+  `}
 
   ${media.mobile} {
     font-size: 24px;
@@ -124,4 +130,4 @@ export const MenuButton = styled.div`
       }
     `}
   }
-`
+`;

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
-// import styles from './header.module.scss'
-import {Container} from '../../styledComponents/index';
+import {Container} from '@/styledComponents';
 import {HeaderSection, HeaderContent, LogoSection, LogoTitle} from './StyledComponents';
-import Nav from '@/components/Nav/Nav';
+import {Nav} from '@/components';
+
 import logo from '@/public/header/logo.svg'
 
 const Header = () => {

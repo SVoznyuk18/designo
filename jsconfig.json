@@ -5,8 +5,8 @@
       "@/containers/*": [
         "/src/containers/*"
       ],
-      "@/components/*": [
-        "/src/components/*"
+      "@/components": [
+        "/src/components/index.js"
       ],
       "@/layout/*": [
         "/src/layout/*"
@@ -19,6 +19,9 @@
       ],
       "@/configs/*": [
         "/src/configs/*"
+      ],
+      "@/styledComponents": [
+        "/src/styledComponents/index.js"
       ],
     }
   }

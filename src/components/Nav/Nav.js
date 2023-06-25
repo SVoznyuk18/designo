@@ -22,10 +22,11 @@ const Nav = ({popUpMenu}) => {
       href:'',
       title: 'CONTACT'
     },
-  ]
-  const [toggleMenu, setToggleMenu] = useState(false);
-  return (
+  ];
 
+  const [toggleMenu, setToggleMenu] = useState(false);
+
+  return (
     <Choose>
       <When condition={popUpMenu}>
         <>
@@ -51,7 +52,7 @@ const Nav = ({popUpMenu}) => {
         </>
       </When>
       <Otherwise>
-        <Navigation  popUpMenu={popUpMenu} active={toggleMenu}>
+        <Navigation popUpMenu={popUpMenu} active={toggleMenu}>
           <NavigationList popUpMenu={popUpMenu}>
             {
               navList && navList.map((link) => (
