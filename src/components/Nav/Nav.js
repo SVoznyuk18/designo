@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import styles from './nav.module.scss';
+import PropTypes from 'prop-types';
 
-const Nav = () => {
+import {MenuButton, Navigation, NavigationList, NavigationItem} from './StyledComponents';
+
+const Nav = ({popUpMenu}) => {
 
   const navList = [
     {
@@ -23,28 +25,55 @@ const Nav = () => {
   ]
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
-    <>
-      <div 
-        className={`${styles.menu_btn} ${toggleMenu && styles.menu_btn__active}`}
-        onClick={() => setToggleMenu(!toggleMenu)}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav className={`${styles.nav} ${toggleMenu && styles.nav__active}`}>
-        <ul className={styles.nav_list}>
-          {
-            navList && navList.map((link) => (
-              <li key={link.id} className={`${styles.nav_link } ${toggleMenu && styles.nav_link__active}`}>
-                <Link href={link.href}>{link.title}</Link>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-    </>
+
+    <Choose>
+      <When condition={popUpMenu}>
+        <>
+          <MenuButton 
+            activeMenu={toggleMenu}
+            onClick={() => setToggleMenu(!toggleMenu)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </MenuButton>
+          <Navigation  popUpMenu={popUpMenu} active={toggleMenu}>
+            <NavigationList popUpMenu={popUpMenu}>
+              {
+                navList && navList.map((link) => (
+                  <NavigationItem active={toggleMenu} popUpMenu={popUpMenu}  key={link.id}>
+                    <Link href={link.href}>{link.title}</Link>
+                  </NavigationItem>
+                ))
+              }
+            </NavigationList>
+          </Navigation>
+        </>
+      </When>
+      <Otherwise>
+        <Navigation  popUpMenu={popUpMenu} active={toggleMenu}>
+          <NavigationList popUpMenu={popUpMenu}>
+            {
+              navList && navList.map((link) => (
+                <NavigationItem active={toggleMenu} popUpMenu={popUpMenu} key={link.id}>
+                  <Link href={link.href}>{link.title}</Link>
+                </NavigationItem>
+              ))
+            }
+          </NavigationList>
+        </Navigation>
+
+      </Otherwise>
+    </Choose>
   );
+};
+
+Nav.propTypes = {
+  popUpMenu: PropTypes.bool,
+}
+
+Nav.defaultProps = {
+  popUpMenu: false,
 }
 
 export default Nav;
