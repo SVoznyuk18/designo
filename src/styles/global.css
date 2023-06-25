@@ -1,5 +1,4 @@
 @import '~normalize.css';
-@import 'variables.scss';
 
 @font-face {
   font-family: 'Jost', sans-serif;
@@ -120,30 +119,4 @@ label {
 
 legend {
   display: block;
-}
-
-.container {
-  width: 375px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-@media screen and (min-width: $mobile) {
-  .container {
-    width: 576px;
-  }
-}
-
-@media screen and (min-width: $tablet) {
-  .container {
-    width: 768px;
-    padding: 0 40px;
-  }
-}
-
-@media screen and (min-width: $desktop) {
-  .container {
-    width: 1200px;
-    padding: 0 165px;
-  }
 }
