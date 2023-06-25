@@ -2,6 +2,7 @@ const breakPoints = {
   mobileS: 375,
   mobile: 576,
   tablet: 768,
+  tabletL: 992,
   desktop: 1200,
 }
 
@@ -11,6 +12,7 @@ export const media = {
   mobileS: mediaQuery(breakPoints.mobileS),
   mobile: mediaQuery(breakPoints.mobile),
   tablet: mediaQuery(breakPoints.tablet),
+  tabletL: mediaQuery(breakPoints.tabletL),
   desktop: mediaQuery(breakPoints.desktop),
 }
 
