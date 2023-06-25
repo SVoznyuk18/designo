@@ -19,7 +19,7 @@ const Header = () => {
             />
             <span className={styles.logo_title}>DESIGNO</span>
           </div>
-          <Nav/>
+          <Nav popUpMenu/>
         </div>
       </div>
     </header>

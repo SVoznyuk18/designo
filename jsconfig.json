@@ -17,6 +17,9 @@
       "@/public/*": [
         "/public/*"
       ],
+      "@/configs/*": [
+        "/src/configs/*"
+      ],
     }
   }
 }
