@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import {Header, Footer} from "@/components";
+
 
 const MainLayout = ({children, title}) => {
   return (
