@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-
+import Image from 'next/image';
 import {media} from "@/configs/index";
 
 export const Container = styled.div`
-  width: 1200px;
+  width: 1440px;
+  max-width: 100%;
   padding: 0 165px;
   margin: 0 auto;
 
@@ -22,3 +23,11 @@ export const Container = styled.div`
     padding: 0 24px;
   }
 `
+export const BgImage = styled(Image)`
+  z-index: -1;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+`;
