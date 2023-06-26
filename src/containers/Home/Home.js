@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import {Container} from '@/styledComponents';
+import {Projects} from '@/components'
 import {
   MainSection, 
   MainContent, 
@@ -39,39 +40,9 @@ const Home = () => {
           </MainContent>
         </MainSection>
 
-        <Container>
-          <ProjectsSection>
-            <ProjectItem>
-              <ProjectImage
-                 src={webDesign}
-                 alt='webDesign'
-              />
-              <Wrapper/>
-              <ProjectTitle>WEB DESIGN</ProjectTitle>
-              <ProjectSubTitle>VIEW PROJECTS</ProjectSubTitle>
-            </ProjectItem>
-            <ProjectItem>
-              <ProjectImage
-                 src={appDesign}
-                 alt='appDesign'
-              />
-              <Wrapper/>
-              <ProjectTitle>APP DESIGN</ProjectTitle>
-              <ProjectSubTitle>VIEW PROJECTS</ProjectSubTitle>
-            </ProjectItem>
-            <ProjectItem>
-              <ProjectImage
-                 src={graphicDesign}
-                 alt='graphicDesign'
-              />
-              <Wrapper/>
-              <ProjectTitle>GRAPHIC DESIGN</ProjectTitle>
-              <ProjectSubTitle>VIEW PROJECTS</ProjectSubTitle>
-            </ProjectItem>
-          </ProjectsSection>
+        <Projects/>
 
-        </Container>
-
+        
         <Container>
 
           <AdvantagesSections>
