@@ -5,22 +5,21 @@ import { media, colors } from '@/configs/index';
 export const Main = styled.main`
   width: 1440px;
   max-width: 100%;
-  padding: 0 165px;
+  padding: 0 165px 160px;
   margin: 0 auto;
 
   ${media.tabletL} {
     width: 992px;
-    padding: 0 40px;
+    padding: 0 40px 120px;
   }
 
   ${media.mobile} {
     width: 576px;
-    padding: 0;
+    padding: 0 0 95px;
   }
 
   ${media.mobileS} {
     width: 375px;
-    padding: 0;
   }
 `;
 

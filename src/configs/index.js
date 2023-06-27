@@ -23,4 +23,5 @@ export const colors = {
   secondary_peach: "#FFAD9B",
   secondary_dark: "#333136",
   secondary_light: "#F1F3F5DB",
+  secondary_light_peach: "#FDF3F0",
 }

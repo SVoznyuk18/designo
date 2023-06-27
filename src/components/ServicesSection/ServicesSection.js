@@ -8,7 +8,6 @@ import {
   Wrapper, 
   ServicesTitle, 
   ServicesSubTitle,
-
 } from './StyledComponents';
 
 import appDesign from "@/public/home/appDesign.jpg";
