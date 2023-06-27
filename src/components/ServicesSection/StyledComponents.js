@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import { media, colors } from '@/configs/index';
 
-export const ProjectsSection = styled.section`
+export const ServicesSection = styled.section`
   padding-top: 160px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -21,7 +21,7 @@ export const ProjectsSection = styled.section`
   }
 `;
 
-export const ProjectItem = styled.div`
+export const ServicesItem = styled.div`
   position: relative;
   border-radius: 15px;
   &:nth-of-type(1) {
@@ -35,7 +35,7 @@ export const ProjectItem = styled.div`
   }
 `;
 
-export const ProjectImage = styled(Image)`
+export const ServicesImage = styled(Image)`
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -58,7 +58,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const ProjectTitle = styled.h3`
+export const ServicesTitle = styled.h3`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -78,7 +78,7 @@ export const ProjectTitle = styled.h3`
   }
 `;
 
-export const ProjectSubTitle = styled.h4`
+export const ServicesSubTitle = styled.h4`
   position: absolute;
   top: 70%;
   left: 50%;

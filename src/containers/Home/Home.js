@@ -1,6 +1,6 @@
 import MainLayout from "@/layout/MainLayout";
 
-import {Projects, Advantages} from '@/components'
+import {ServicesSection, Advantages} from '@/components'
 import {
   MainSection, 
   MainContent, 
@@ -17,7 +17,7 @@ const Home = () => {
           <SubTitle>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</SubTitle>
         </MainContent>
       </MainSection>
-      <Projects/>
+      <ServicesSection/>
       <Advantages/>
     </MainLayout>
   )
