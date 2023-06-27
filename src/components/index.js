@@ -4,6 +4,7 @@ import Nav from "./Nav/Nav";
 import SocialIcon from "./SocialIcon/SocialIcon";
 import Projects from "./ProjectsSection/ProjectsSection";
 import Advantages from "./Advantages/Advantages";
+import MainSection from './MainSection/MainSection';
 
 export {
   Footer,
@@ -11,5 +12,6 @@ export {
   Nav,
   SocialIcon,
   Projects,
-  Advantages
+  Advantages,
+  MainSection
 }

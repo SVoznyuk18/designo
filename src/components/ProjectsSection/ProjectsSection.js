@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import {Container} from '@/styledComponents';
 import {
   ProjectsSection, 
@@ -17,15 +19,18 @@ export const Projects = () => {
   return (
     <Container>
       <ProjectsSection>
-        <ProjectItem>
-          <ProjectImage
-            src={webDesign}
-            alt='webDesign'
-          />
-          <Wrapper/>
-          <ProjectTitle>WEB DESIGN</ProjectTitle>
-          <ProjectSubTitle>VIEW PROJECTS</ProjectSubTitle>
-        </ProjectItem>
+        <Link href='/webDesign'>
+          <ProjectItem>
+            <ProjectImage
+              src={webDesign}
+              alt='webDesign'
+            />
+            <Wrapper/>
+            <ProjectTitle>WEB DESIGN</ProjectTitle>
+            <ProjectSubTitle>VIEW PROJECTS</ProjectSubTitle>
+          </ProjectItem>
+        </Link>
+      
         <ProjectItem>
           <ProjectImage
             src={appDesign}
