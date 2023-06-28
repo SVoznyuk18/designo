@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import MainLayout from "@/layout/MainLayout";
 import {MainSection, Projects} from '@/components';
 
-const WebDesign = ({projects}) => {
+const GraphicDesign = ({projects}) => {
   return (
-    <MainLayout title='Web Design'>
+    <MainLayout title='Graphic Design'>
       <MainSection
-        title='Web Design'
-        subtitle='We build websites that serve as powerful marketing tools <br/>and bring memorable brand experiences.'
+        title='Graphic Design'
+        subtitle='We deliver eye-catching branding materials that are <br>
+        tailored to meet your business objectives.
+        '
       />
       <Projects projects={projects}/>
     </MainLayout>
@@ -24,4 +26,4 @@ Projects.propTypes = {
   })).isRequired
 }
 
-export default WebDesign;
+export default GraphicDesign;
