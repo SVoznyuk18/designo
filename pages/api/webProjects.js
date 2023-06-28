@@ -1,5 +1,5 @@
-import {webProjects} from './data/webProjects';
+import {webProjectsDB} from './data/webProjectsDB';
 
 export default function handler(req, res) {
-  res.status(200).json(webProjects);
+  res.status(200).json(webProjectsDB);
 };

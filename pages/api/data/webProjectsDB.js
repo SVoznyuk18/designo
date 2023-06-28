@@ -1,4 +1,4 @@
-export const webProjects = [
+export const webProjectsDB = [
     {
         id: 1,
         title: 'EXPRESS',

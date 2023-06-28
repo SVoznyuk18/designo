@@ -11,6 +11,7 @@ const ProjectCard = ({project}) => {
           src={project?.image}
           alt={project?.title}
           fill={true}
+          style={{objectFit: "cover"}}
           placeholder='blur'
           blurDataURL='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8v3Z2PQAHwgLItQaUHgAAAABJRU5ErkJggg=='
         />
