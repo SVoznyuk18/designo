@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import { media, colors } from '@/configs/index';
 
 export const ServicesSection = styled.section`
@@ -21,9 +23,17 @@ export const ServicesSection = styled.section`
   }
 `;
 
-export const ServicesItem = styled.div`
+export const ServicesItem = styled(Link)`
   position: relative;
   border-radius: 15px;
+
+  &:hover {
+    span {
+      cursor: pointer;
+      background-color: rgba(231, 129, 107, 0.5);
+    }
+  }
+
   &:nth-of-type(1) {
     grid-row: 1/3;
   }
@@ -43,7 +53,7 @@ export const ServicesImage = styled(Image)`
   object-fit: cover;
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.span`
   position: absolute;
   top: 0;
   left: 0;
@@ -51,11 +61,6 @@ export const Wrapper = styled.div`
   height: 100%;
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.5);
-
-  &:hover {
-    cursor: pointer;
-    background-color: rgba(231, 129, 107, 0.5);
-  }
 `;
 
 export const ServicesTitle = styled.h3`

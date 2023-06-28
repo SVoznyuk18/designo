@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import {Container} from '@/styledComponents';
 import {
   ServicesSection, 
@@ -18,40 +16,33 @@ export const Services = () => {
   return (
     <Container>
       <ServicesSection>
-        <Link href='/webDesign'>
-          <ServicesItem>
-            <ServicesImage
-              src={webDesign}
-              alt='webDesign'
-            />
-            <Wrapper/>
-            <ServicesTitle>WEB DESIGN</ServicesTitle>
-            <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
-          </ServicesItem>
-        </Link>
-      
-        <Link href='/appDesign'>
-          <ServicesItem>
-            <ServicesImage
-              src={appDesign}
-              alt='appDesign'
-            />
-            <Wrapper/>
-            <ServicesTitle>APP DESIGN</ServicesTitle>
-            <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
-          </ServicesItem>
-        </Link>
-        <Link href='/graphicDesign'>
-          <ServicesItem>
-            <ServicesImage
-              src={graphicDesign}
-              alt='graphicDesign'
-            />
-            <Wrapper/>
-            <ServicesTitle>GRAPHIC DESIGN</ServicesTitle>
-            <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
-          </ServicesItem>
-        </Link>
+        <ServicesItem href='/webDesign'>
+          <ServicesImage
+            src={webDesign}
+            alt='webDesign'
+          />
+          <Wrapper/>
+          <ServicesTitle>WEB DESIGN</ServicesTitle>
+          <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
+        </ServicesItem>
+        <ServicesItem href='/appDesign'>
+          <ServicesImage
+            src={appDesign}
+            alt='appDesign'
+          />
+          <Wrapper/>
+          <ServicesTitle>APP DESIGN</ServicesTitle>
+          <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
+        </ServicesItem>
+        <ServicesItem href='/graphicDesign'>
+          <ServicesImage
+            src={graphicDesign}
+            alt='graphicDesign'
+          />
+          <Wrapper/>
+          <ServicesTitle>GRAPHIC DESIGN</ServicesTitle>
+          <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
+        </ServicesItem>
       </ServicesSection>
     </Container>
   );
