@@ -31,24 +31,30 @@ export const Services = () => {
           </ServicesItem>
         </Link>
       
-        <ServicesItem>
-          <ServicesImage
-            src={appDesign}
-            alt='appDesign'
-          />
-          <Wrapper/>
-          <ServicesTitle>APP DESIGN</ServicesTitle>
-          <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
-        </ServicesItem>
-        <ServicesItem>
-          <ServicesImage
-            src={graphicDesign}
-            alt='graphicDesign'
-          />
-          <Wrapper/>
-          <ServicesTitle>GRAPHIC DESIGN</ServicesTitle>
-          <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
-        </ServicesItem>
+        <Link href='/appDesign'>
+          <ServicesItem>
+              <ServicesImage
+                src={appDesign}
+                alt='appDesign'
+              />
+              <Wrapper/>
+              <ServicesTitle>APP DESIGN</ServicesTitle>
+              <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
+            </ServicesItem>
+        </Link>
+       
+        <Link href='/graphicDesign'>
+          <ServicesItem>
+            <ServicesImage
+              src={graphicDesign}
+              alt='graphicDesign'
+            />
+            <Wrapper/>
+            <ServicesTitle>GRAPHIC DESIGN</ServicesTitle>
+            <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
+          </ServicesItem>
+        </Link>
+       
       </ServicesSection>
     </Container>
   );
