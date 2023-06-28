@@ -1,10 +1,8 @@
-
 import PropTypes from 'prop-types';
 
 import {ProjectCard} from '@/components';
 import {Container} from '@/styledComponents';
 import {ProjectsSection} from './StyledComponents';
-
 
 const Projects = ({projects}) => {
   return (
