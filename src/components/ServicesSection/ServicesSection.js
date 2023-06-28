@@ -41,15 +41,17 @@ export const Services = () => {
             <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
           </ServicesItem>
         </Link>
-        <ServicesItem>
-          <ServicesImage
-            src={graphicDesign}
-            alt='graphicDesign'
-          />
-          <Wrapper/>
-          <ServicesTitle>GRAPHIC DESIGN</ServicesTitle>
-          <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
-        </ServicesItem>
+        <Link href='/graphicDesign'>
+          <ServicesItem>
+            <ServicesImage
+              src={graphicDesign}
+              alt='graphicDesign'
+            />
+            <Wrapper/>
+            <ServicesTitle>GRAPHIC DESIGN</ServicesTitle>
+            <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
+          </ServicesItem>
+        </Link>
       </ServicesSection>
     </Container>
   );
