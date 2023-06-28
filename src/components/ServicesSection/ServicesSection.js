@@ -30,15 +30,17 @@ export const Services = () => {
           </ServicesItem>
         </Link>
       
-        <ServicesItem>
-          <ServicesImage
-            src={appDesign}
-            alt='appDesign'
-          />
-          <Wrapper/>
-          <ServicesTitle>APP DESIGN</ServicesTitle>
-          <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
-        </ServicesItem>
+        <Link href='/appDesign'>
+          <ServicesItem>
+            <ServicesImage
+              src={appDesign}
+              alt='appDesign'
+            />
+            <Wrapper/>
+            <ServicesTitle>APP DESIGN</ServicesTitle>
+            <ServicesSubTitle>VIEW PROJECTS</ServicesSubTitle>
+          </ServicesItem>
+        </Link>
         <ServicesItem>
           <ServicesImage
             src={graphicDesign}
