@@ -7,6 +7,7 @@ import Advantages from "./Advantages/Advantages";
 import MainSection from './MainSection/MainSection';
 import ProjectCard from './ProjectCard/ProjectCard';
 import Projects from './Projects/Projects';
+import DescriptionTeam from './DescriptionTeam/DescriptionTeam';
 
 export {
   Footer,
@@ -17,5 +18,6 @@ export {
   Advantages,
   MainSection,
   ProjectCard,
-  Projects
+  Projects,
+  DescriptionTeam
 }
