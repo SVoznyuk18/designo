@@ -7,6 +7,9 @@ import Advantages from "./Advantages/Advantages";
 import MainSection from './MainSection/MainSection';
 import ProjectCard from './ProjectCard/ProjectCard';
 import Projects from './Projects/Projects';
+import DescriptionTeam from './DescriptionTeam/DescriptionTeam';
+import LocationCard from './LocationCard/LocationCard';
+import LocationsSection from './LocationsSection/LocationsSection';
 
 export {
   Footer,
@@ -17,5 +20,8 @@ export {
   Advantages,
   MainSection,
   ProjectCard,
-  Projects
+  Projects,
+  DescriptionTeam,
+  LocationCard,
+  LocationsSection
 }

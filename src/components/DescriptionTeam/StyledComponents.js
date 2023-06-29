@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 
 import { media, colors } from '@/configs/index';
 
-export const Main = styled.main`
+export const DescriptionSection = styled.section`
   width: 1440px;
   max-width: 100%;
   padding: 0 165px 160px;
@@ -15,7 +15,7 @@ export const Main = styled.main`
 
   ${media.mobile} {
     width: 576px;
-    padding: 0;
+    padding: 0 0 120px;
   }
 
   ${media.mobileS} {
@@ -24,17 +24,14 @@ export const Main = styled.main`
 `;
 
 export const MainContent = styled.div`
+  display: flex;
   width: 100%;
   border-radius: 15px;
   overflow: hidden;
 
-  ${props => props.variant === 'horizontal' && css `
-    display: flex;
-
-    ${media.tablet} {
-      flex-direction: column;
-    }
-  `}
+  ${media.tablet} {
+    flex-direction: column;
+  }
 
   ${media.mobile} {
     border-radius: 0px;
@@ -44,7 +41,11 @@ export const MainContent = styled.div`
 export const WrapperImage = styled.div`
   position: relative;
   width: 50%;
-  height: 480px;
+  min-height: 320px;
+
+  ${props => props.variant === 'imageLeft' && css`
+    order: 1;
+  `}
 
   ${media.tablet} {
     width: 100%;
@@ -54,43 +55,35 @@ export const WrapperImage = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  margin: 0 auto;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 64px 0 64px;
-  background-color: ${colors.primary_peach};
+  padding: 154px 55px;
+  background-color: ${colors.secondary_light_peach};
 
-  ${media.mobile} {
-    padding: 105px 24px;
+  ${props => props.variant === 'imageLeft' && css`
+    order: 2;
+  `}
+
+  ${media.tablet} {
+    width: 100%;
+    padding: 65px 55px;
+    order: 2;
   }
 
-  ${props => props.variant === 'horizontal' && css `
-    padding: 100px 55px 0px;
-    width: 50%;
-
-    ${media.tablet} {
-      width: 100%;
-      padding: 64px 55px;
-      order: 2;
-    }
-
-    ${media.mobile} {
-      padding: 80px 24px;
-    }
-  `}
+  ${media.mobile} {
+    padding: 80px 24px;
+  }
+  
 `;
 
 export const Title = styled.h1`
-  color: ${colors.primary_white};
+  color: ${colors.primary_peach};
   text-align: center;
   font-size: 48px;
   font-weight: 500;
   line-height: 48px;
-
-  ${props => props.variant === 'horizontal' && css `
-    text-align: start;
-  `}
 
   ${media.mobile} {
     font-size: 32px;
@@ -99,18 +92,15 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  color: ${colors.primary_white};
+  color: ${colors.secondary_dark};
   font-size: 16px;
   line-height: 26px;
   margin-top: 24px;
   text-align: center;
-
-  ${props => props.variant === 'horizontal' && css `
-    text-align: start;
-  `}
 
   ${media.mobile} {
     font-size: 15px;
     line-height: 25px;
   }
 `;
+
