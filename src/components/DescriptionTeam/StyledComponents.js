@@ -15,7 +15,7 @@ export const DescriptionSection = styled.section`
 
   ${media.mobile} {
     width: 576px;
-    padding: 0;
+    padding: 0 0 120px;
   }
 
   ${media.mobileS} {

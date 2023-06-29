@@ -1,5 +1,5 @@
 import MainLayout from "@/layout/MainLayout";
-import {MainSection, DescriptionTeam} from '@/components';
+import {MainSection, DescriptionTeam, LocationsSection} from '@/components';
 
 import about from "@/public/about/about.jpg";
 import talent from "@/public/about/talent.jpg";
@@ -26,6 +26,7 @@ const About = () => {
         alt='image_talent'
         variant='imageLeft'
       />
+      <LocationsSection/>
       <DescriptionTeam
         title='The real deal'
         subTitle='As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own. Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every opportunity. We make design and technology more accessible and give you tools to measure success.
