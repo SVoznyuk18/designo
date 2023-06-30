@@ -2,9 +2,9 @@ import {Container} from '@/styledComponents';
 import {CountryCard} from '@/components';
 
 import {Countries, CountriesContent} from './StyledConponents';
-import australia from "@/public/locations/australia.svg";
-import canada from "@/public/locations/canada.svg";
-import unitedKingdom from "@/public/locations/unitedKingdom.svg";
+import australia from "@/public/countries/australia.svg";
+import canada from "@/public/countries/canada.svg";
+import unitedKingdom from "@/public/countries/unitedKingdom.svg";
 
 const CountriesSection = () => {
   return (
