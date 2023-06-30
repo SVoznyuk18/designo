@@ -1,25 +1,38 @@
 import Image from "next/image";
 import PropTypes from 'prop-types';
 
-import {Card, Title, Button} from './StyledComponents';
+import {Card, WrapperInfo, Title, ContactsSection, Contact, ContactTitle, WrapperImage} from './StyledComponents';
 
-const LocationCard = ({image, alt, title, btnTitle}) => {
-  return (
+const LocationCard = ({image, alt, title, location, variant}) => {
+return (
     <Card>
-      <Image
-        src={image}
-        alt={alt}
-        width={200}
-        height={200}
-      />
-      <Title>{title}</Title>
-      <Button>{btnTitle}</Button>
+      <WrapperInfo variant={variant}>
+        <Title>{title}</Title>
+        <ContactsSection >
+          <Contact>
+            <ContactTitle>{location.adressTitle}</ContactTitle>
+            <p>{location.adress}</p>
+          </Contact>
+          <Contact>
+            <ContactTitle>{location.contactTitle}</ContactTitle>
+            <p>P : <a href={location.hrefPhone}>{location.phone}</a></p> 
+            <p>M : <a href={`mailto:${location.mail}`}>{location.mail}</a></p> 
+          </Contact>
+        </ContactsSection>
+      </WrapperInfo>
+      <WrapperImage variant={variant}>
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          style={{objectFit: 'cover'}}
+        />
+      </WrapperImage>
     </Card>
   )
 }
 
 LocationCard.propTypes = {
-  title: PropTypes.string,
   image: PropTypes.shape({
     blurDataURL: PropTypes.string,
     blurHeight: PropTypes.number,
@@ -29,12 +42,21 @@ LocationCard.propTypes = {
     width: PropTypes.number,
   }).isRequired,
   alt: PropTypes.string.isRequired,
-  btnTitle: PropTypes.string,
+  title: PropTypes.string,
+  location: PropTypes.shape({
+    adressTitle: PropTypes.string,
+    adress: PropTypes.string,
+    contactTitle: PropTypes.string,
+    phone: PropTypes.string,
+    hrefPhone: PropTypes.string,
+    mail: PropTypes.string
+  }).isRequired,
+  variant: PropTypes.string,
 }
 
 LocationCard.defaultProps = {
   title: '',
-  btnTitle: '',
+  variant: 'default',
 }
 
 export default LocationCard;
