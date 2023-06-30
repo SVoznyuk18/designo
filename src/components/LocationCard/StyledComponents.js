@@ -1,14 +1,20 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 import { media, colors } from '@/configs/index';
 
 export const Card = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 
   ${media.desktop} {
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 120px;
+  }
+
+  ${media.mobile} {
+    margin-bottom: 30px;
   }
 `;
 
@@ -20,12 +26,23 @@ export const WrapperInfo = styled.div`
   overflow: hidden;
   background-color: ${colors.secondary_light_peach};
 
+  ${props => props.variant === 'imageLeft' && css`
+    order: 2;
+    margin-left: 30px;
+    margin-right: 0px;
+  `}
+
   ${media.desktop} {
     padding: 85px 95px;
     width: 100%;
     margin-right: 0px;
     margin-top: 30px;
     order: 2;
+
+    ${props => props.variant === 'imageLeft' && css`
+      margin-left: 0px;
+      margin-right: 30px;
+    `}
   }
 
   ${media.tablet} {
@@ -73,6 +90,10 @@ export const WrapperImage = styled.div`
   min-width: 350px;
   border-radius: 15px;
   overflow: hidden;
+
+  ${props => props.variant === 'imageLeft' && css`
+    order: 1;
+  `}
 
   ${media.desktop} {
     width: 100%;

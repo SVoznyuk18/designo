@@ -5,7 +5,7 @@ import { media } from '@/configs/index';
 export const Main = styled.main`
   width: 1440px;
   max-width: 100%;
-  padding: 0 165px 160px;
+  padding: 0 165px 380px;
   margin: 0 auto;
 
   ${media.tabletL} {
@@ -15,7 +15,7 @@ export const Main = styled.main`
 
   ${media.mobile} {
     width: 576px;
-    padding: 0;
+    padding: 0 0 310px;
   }
 
   ${media.mobileS} {

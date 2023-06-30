@@ -3,36 +3,60 @@ import PropTypes from 'prop-types';
 
 import {Card, WrapperInfo, Title, ContactsSection, Contact, ContactTitle, WrapperImage} from './StyledComponents';
 
-import australia from "@/public/locations/australia.png";
-
-const LocationCard = () => {
+const LocationCard = ({image, alt, title, location, variant}) => {
 return (
     <Card>
-      <WrapperInfo>
-        <Title>Canada</Title>
-        <ContactsSection>
+      <WrapperInfo variant={variant}>
+        <Title>{title}</Title>
+        <ContactsSection >
           <Contact>
-            <ContactTitle>Designo Central Office</ContactTitle>
-            <p>3886 Wellington Street</p>
-            <p>Toronto, Ontario M9C 3J5</p>
+            <ContactTitle>{location.adressTitle}</ContactTitle>
+            <p>{location.adress}</p>
           </Contact>
           <Contact>
-            <ContactTitle>Contact Us (Central Office)</ContactTitle>
-            <p>P : <a href='+12538638967'>+1 253-863-8967</a></p> 
-            <p>M : <a href='mailto:contact@designo.co'>contact@designo.co</a></p> 
+            <ContactTitle>{location.contactTitle}</ContactTitle>
+            <p>P : <a href={location.hrefPhone}>{location.phone}</a></p> 
+            <p>M : <a href={`mailto:${location.mail}`}>{location.mail}</a></p> 
           </Contact>
         </ContactsSection>
       </WrapperInfo>
-      <WrapperImage>
+      <WrapperImage variant={variant}>
         <Image
-          src={australia}
-          alt='image_australia'
+          src={image}
+          alt={alt}
           fill
           style={{objectFit: 'cover'}}
         />
       </WrapperImage>
     </Card>
   )
+}
+
+LocationCard.propTypes = {
+  image: PropTypes.shape({
+    blurDataURL: PropTypes.string,
+    blurHeight: PropTypes.number,
+    blurWidth: PropTypes.number,
+    height: PropTypes.number,
+    src: PropTypes.string,
+    width: PropTypes.number,
+  }).isRequired,
+  alt: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  location: PropTypes.shape({
+    adressTitle: PropTypes.string,
+    adress: PropTypes.string,
+    contactTitle: PropTypes.string,
+    phone: PropTypes.string,
+    hrefPhone: PropTypes.string,
+    mail: PropTypes.string
+  }).isRequired,
+  variant: PropTypes.string,
+}
+
+LocationCard.defaultProps = {
+  title: '',
+  variant: 'default',
 }
 
 export default LocationCard;
