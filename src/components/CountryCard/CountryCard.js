@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {Card, Title, Button} from './StyledComponents';
 
-const LocationCard = ({image, alt, title, btnTitle}) => {
+const CountryCard = ({image, alt, title, btnTitle}) => {
   return (
     <Card>
       <Image
@@ -18,7 +18,7 @@ const LocationCard = ({image, alt, title, btnTitle}) => {
   )
 }
 
-LocationCard.propTypes = {
+CountryCard.propTypes = {
   title: PropTypes.string,
   image: PropTypes.shape({
     blurDataURL: PropTypes.string,
@@ -32,9 +32,9 @@ LocationCard.propTypes = {
   btnTitle: PropTypes.string,
 }
 
-LocationCard.defaultProps = {
+CountryCard.defaultProps = {
   title: '',
   btnTitle: '',
 }
 
-export default LocationCard;
+export default CountryCard;

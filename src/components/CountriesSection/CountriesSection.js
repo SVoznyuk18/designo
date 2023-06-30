@@ -1,38 +1,38 @@
 import {Container} from '@/styledComponents';
-import {LocationCard} from '@/components';
+import {CountryCard} from '@/components';
 
-import {Locations, LocationsContent} from './StyledConponents';
+import {Countries, CountriesContent} from './StyledConponents';
 import australia from "@/public/locations/australia.svg";
 import canada from "@/public/locations/canada.svg";
 import unitedKingdom from "@/public/locations/unitedKingdom.svg";
 
-const LocationsSection = () => {
+const CountriesSection = () => {
   return (
-    <Locations>
+    <Countries>
       <Container>
-        <LocationsContent>
-          <LocationCard
+        <CountriesContent>
+          <CountryCard
             image={canada}
             alt='canada_img'
             title='canada'
             btnTitle='SEE LOCATION'
           />
-          <LocationCard
+          <CountryCard
             image={australia}
             alt='australia_img'
             title='australia'
             btnTitle='SEE LOCATION'
           />
-          <LocationCard
+          <CountryCard
             image={unitedKingdom}
             alt='unitedKingdom_img'
             title='united kingdom'
             btnTitle='SEE LOCATION'
           />
-        </LocationsContent>
+        </CountriesContent>
       </Container>
-    </Locations>
+    </Countries>
   )
 }
 
-export default LocationsSection;
+export default CountriesSection;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import {media} from "@/configs/index";
 
-export const Locations = styled.section`
+export const Countries = styled.section`
   width: 100%;
   padding-bottom: 160px;
 
@@ -11,7 +11,7 @@ export const Locations = styled.section`
   }
 `;
 
-export const LocationsContent = styled.div`
+export const CountriesContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -8,8 +8,8 @@ import MainSection from './MainSection/MainSection';
 import ProjectCard from './ProjectCard/ProjectCard';
 import Projects from './Projects/Projects';
 import DescriptionTeam from './DescriptionTeam/DescriptionTeam';
-import LocationCard from './LocationCard/LocationCard';
-import LocationsSection from './LocationsSection/LocationsSection';
+import CountryCard from './CountryCard/CountryCard';
+import CountriesSection from './CountriesSection/CountriesSection';
 
 export {
   Footer,
@@ -22,6 +22,6 @@ export {
   ProjectCard,
   Projects,
   DescriptionTeam,
-  LocationCard,
-  LocationsSection
+  CountryCard,
+  CountriesSection
 }
