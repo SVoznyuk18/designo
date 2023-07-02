@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import {Container} from '@/styledComponents';
-import {Nav, SocialIcon} from '@/components';
+import {Nav, SocialIcon, Widget } from '@/components';
 import {
     FooterSection, 
     FooterTopContent, 
@@ -92,7 +92,8 @@ const Footer = () => {
               alt='instagram_img'
             />
           </SocialSection>
-        </FooterBottomContent>           
+        </FooterBottomContent>
+        <Widget/>              
       </Container>
     </FooterSection>
   );
