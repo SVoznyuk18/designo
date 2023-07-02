@@ -23,6 +23,9 @@
       "@/styledComponents": [
         "/src/styledComponents/index.js"
       ],
+      "@/utils": [
+        "/src/utils/index.js"
+      ],
     }
   }
 }
