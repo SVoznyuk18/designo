@@ -121,3 +121,31 @@ label {
 legend {
   display: block;
 }
+
+/* @-webkit-keyframes autofill {
+  to {
+    color: inherit;
+    background: transparent;
+  }
+}
+
+-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+} */
+
+/* input:autofill {
+  background-color: #E7816B !important;
+}
+
+input:-webkit-autofill {
+  background-color: #E7816B !important;
+} */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
+}

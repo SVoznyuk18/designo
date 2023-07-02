@@ -12,6 +12,7 @@ import CountryCard from './CountryCard/CountryCard';
 import CountriesSection from './CountriesSection/CountriesSection';
 import LocationCard from './LocationCard/LocationCard';
 import LocationsSection from './LocationsSection/LocationsSection';
+import Form from './Form/Form';
 
 export {
   Footer,
@@ -27,5 +28,6 @@ export {
   CountryCard,
   CountriesSection,
   LocationCard,
-  LocationsSection
+  LocationsSection,
+  Form
 }
