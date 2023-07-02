@@ -6,6 +6,8 @@ import {FormSection, InputWrapper, Input, TextArea, Error, ErrorMessage ,Button}
 
 import attention from '@/public/form/attention.svg';
 
+import {regExpEmail, regExpPhone} from '@/utils';
+
 const Form = () => {
 
     const [field, setField] = useState({
@@ -14,6 +16,13 @@ const Form = () => {
         phone: '',
         message: '',
     });
+
+    // const [validate, setValidate] = useState({
+    //     name: 'Can’t be empty',
+    //     email: 'Can’t be empty',
+    //     phone: 'Can’t be empty',
+    //     message: 'Can’t be empty',
+    // })
 
     const handleFields = (name, value) => {
         setField({...field, [name]: value})
@@ -25,9 +34,18 @@ const Form = () => {
 
     }
 
-    const validation = () => {
+    // const validation = (name, value) => {
 
-    }
+    //     switch (value) {
+    //         case value.length === 0:
+    //             setValidate({...validate, [name]: 'Can’t be empty'});
+    //             break;
+    //         case value.length <= 4:
+    //             setValidate({...validate, [name]: 'Must be more 4 symbols'});
+    //             break;
+    //         case name === 'email' && 
+    //     }
+    // }
 
     return (
         <FormSection onSubmit={(e) => hadleSubmit(e)}>
