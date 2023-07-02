@@ -13,6 +13,7 @@ import CountriesSection from './CountriesSection/CountriesSection';
 import LocationCard from './LocationCard/LocationCard';
 import LocationsSection from './LocationsSection/LocationsSection';
 import Form from './Form/Form';
+import Widget from './Widget/Widget';
 
 export {
   Footer,
@@ -29,5 +30,6 @@ export {
   CountriesSection,
   LocationCard,
   LocationsSection,
-  Form
+  Form,
+  Widget
 }

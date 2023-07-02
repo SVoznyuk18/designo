@@ -13,7 +13,7 @@ const MainLayout = ({children, title}) => {
         />
       </Head>
       <Header/>
-      {children}       
+      {children}
       <Footer/>
     </>
   );

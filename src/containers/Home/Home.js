@@ -1,6 +1,6 @@
 import MainLayout from "@/layout/MainLayout";
 
-import {ServicesSection, Advantages, Form} from '@/components'
+import {ServicesSection, Advantages} from '@/components'
 import {
   MainSection, 
   MainContent, 
@@ -19,7 +19,6 @@ const Home = () => {
       </MainSection>
       <ServicesSection/>
       <Advantages/>
-      <Form/>
     </MainLayout>
   )
 }

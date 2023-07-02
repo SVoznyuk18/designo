@@ -3,6 +3,7 @@ import Image from 'next/image';
 import {media} from "@/configs/index";
 
 export const Container = styled.div`
+  position: relative;
   width: 1440px;
   max-width: 100%;
   padding: 0 165px;
