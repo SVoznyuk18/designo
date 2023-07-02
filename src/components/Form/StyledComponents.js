@@ -59,13 +59,14 @@ export const TextArea = styled.textarea`
 export const Error = styled.div`
     position: absolute;
     right: 8px;
-    bottom: 14px;
+    bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 `;
 
 export const ErrorMessage = styled.h3`
+    margin-right: 10px;
     color: ${colors.primary_white};
     font-size: 12px;
     font-style: italic;
