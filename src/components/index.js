@@ -14,6 +14,7 @@ import LocationCard from './LocationCard/LocationCard';
 import LocationsSection from './LocationsSection/LocationsSection';
 import Form from './Form/Form';
 import Widget from './Widget/Widget';
+import ClassicButton from './ClassicButton/ClassicButton';
 
 export {
   Footer,
@@ -31,5 +32,6 @@ export {
   LocationCard,
   LocationsSection,
   Form,
-  Widget
+  Widget,
+  ClassicButton
 }
