@@ -33,7 +33,6 @@ export const MainContent = styled.div`
   padding: 145px 95px 0;
   background-color: ${colors.primary_peach};
   border-radius: 15px;
-  z-index: -1;
 
   ${media.tablet} {
     padding: 60px 0 0 0;
