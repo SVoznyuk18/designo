@@ -1,7 +1,8 @@
 import Image from "next/image";
 import PropTypes from 'prop-types';
 
-import {Card, Title, Button} from './StyledComponents';
+import {ClassicButton} from '@/components'
+import {Card, Title} from './StyledComponents';
 
 const CountryCard = ({image, alt, title, btnTitle}) => {
   return (
@@ -13,7 +14,7 @@ const CountryCard = ({image, alt, title, btnTitle}) => {
         height={200}
       />
       <Title>{title}</Title>
-      <Button>{btnTitle}</Button>
+      <ClassicButton variant='peach'>{btnTitle}</ClassicButton>
     </Card>
   )
 }
