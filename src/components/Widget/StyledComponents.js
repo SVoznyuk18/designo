@@ -78,15 +78,3 @@ export const WidgetSubTitle = styled.h3`
     margin-bottom: 32px;
   }
 `;
-
-export const Button = styled.button`
-  min-width: 150px;
-  height: 55px;
-  border-radius: 8px;
-  background-color: ${colors.primary_white};
-  color: ${colors.secondary_dark};
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-`;

@@ -1,4 +1,5 @@
-import {WidgetSection, InfoWrapper,  WidgetTitle, WidgetSubTitle, Button} from './StyledComponents';
+import {ClassicButton} from '@/components'
+import {WidgetSection, InfoWrapper,  WidgetTitle, WidgetSubTitle} from './StyledComponents';
 
 const Widget = () => {
   return (
@@ -8,7 +9,7 @@ const Widget = () => {
         <WidgetSubTitle>Ready to take it to the next level? Contact us today and find out 
             how our expertise can help your business grow.</WidgetSubTitle>
       </InfoWrapper>
-      <Button>Get in touch</Button>
+      <ClassicButton variant='light'>Get in touch</ClassicButton>
     </WidgetSection>
   )
 }

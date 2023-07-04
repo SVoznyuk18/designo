@@ -51,6 +51,7 @@ export const Title = styled.h1`
   font-size: 48px;
   font-weight: 500;
   line-height: 48px;
+  margin-bottom: 30px;
   
   ${media.tablet} {
     text-align: center;
@@ -66,6 +67,7 @@ export const SubTitle = styled.h2`
   color: #FFF;
   font-size: 16px;
   line-height: 26px;
+  margin-bottom: 40px;
   
   ${media.tablet} {
     text-align: center;
