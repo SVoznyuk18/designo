@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import {Container} from '@/styledComponents';
 import {Nav, SocialIcon, Widget } from '@/components';
@@ -26,6 +27,7 @@ const Footer = () => {
     <FooterSection>
       <Container>
         <FooterTopContent>
+          <Link href='/'>
             <LogoSection>
               <Image
                 src={logo}
@@ -35,7 +37,9 @@ const Footer = () => {
               />
               <LogoTitle>DESIGNO</LogoTitle>
             </LogoSection>
-            <Nav/>
+          
+          </Link>
+          <Nav/>
         </FooterTopContent>
         <FooterBottomContent>
           <ContactsSection>

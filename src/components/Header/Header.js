@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import {Container} from '@/styledComponents';
 import {HeaderSection, HeaderContent, LogoSection, LogoTitle} from './StyledComponents';
@@ -11,15 +12,18 @@ const Header = () => {
     <HeaderSection>
       <Container>
         <HeaderContent>
-          <LogoSection>
-            <Image
-              src={logo}
-              width={24}
-              height={24}
-              alt='logo_img'
-            />
-            <LogoTitle>DESIGNO</LogoTitle>
-          </LogoSection>
+          <Link href="/">
+            <LogoSection>
+              <Image
+                src={logo}
+                width={24}
+                height={24}
+                alt='logo_img'
+              />
+              <LogoTitle>DESIGNO</LogoTitle>
+            </LogoSection>
+          </Link>
+          
           <Nav popUpMenu/>
         </HeaderContent>
       </Container>
