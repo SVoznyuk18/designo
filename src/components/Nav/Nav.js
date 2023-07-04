@@ -9,17 +9,17 @@ const Nav = ({popUpMenu}) => {
   const navList = [
     {
       id: 1,
-      href:'',
+      href:'/about',
       title: 'OUR COMPANY'
     },
     {
       id: 2,
-      href:'',
+      href:'/locations',
       title: 'LOCATIONS'
     },
     {
       id: 3,
-      href:'',
+      href:'/contact',
       title: 'CONTACT'
     },
   ];
