@@ -9,7 +9,7 @@ const nextConfig = {
     ],
   },
   env: {
-    PROD_HOST: 'https://vercel.com/svoznyuk18',
+    PROD_HOST: 'https://designo-svoznyuk18.vercel.app',
     DEV_HOST: 'http://127.0.0.1:3000'
   }
 }
