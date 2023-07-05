@@ -1,6 +1,9 @@
-import MainLayout from "@/layout/MainLayout";
+import dynamic from "next/dynamic";
 
-import {Form, CountriesSection} from '@/components';
+const MainLayout = dynamic(() => import('@/layout/MainLayout'));
+const Form = dynamic(() => import('../../components/Form/Form'), {loading: () => <p>Loading...</p>});
+const CountriesSection = dynamic(() => import('../../components/CountriesSection/CountriesSection'), {loading: () => <p>Loading...</p>});
+
 import {ContactSection, Title, SubTitle, Info, Wrapper} from './StyledComponents';
 
 const Contact = () => {

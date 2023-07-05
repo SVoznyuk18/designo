@@ -1,4 +1,6 @@
-import {About} from '@/containers';
+import dynamic from "next/dynamic";
+
+const About = dynamic(() => import('../src/containers/About/About'));
 
 const AboutPage = () => {
     return (

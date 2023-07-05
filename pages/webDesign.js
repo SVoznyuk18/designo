@@ -1,4 +1,6 @@
-import {WebDesign} from "@/containers"
+import dynamic from "next/dynamic";
+
+const WebDesign = dynamic(() => import('../src/containers/WebDesign/WebDesign'));
 
 export const getStaticProps = async () => {
     const responseProjects = await fetch('http://localhost:3000/api/webProjects');
