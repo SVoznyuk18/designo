@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { media, colors } from '@/configs/index';
 
 export const ServicesSection = styled.section`
-  padding-top: 160px;
+  padding-top: 120px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(310px, auto);
