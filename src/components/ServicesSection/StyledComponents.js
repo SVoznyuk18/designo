@@ -8,7 +8,7 @@ export const ServicesSection = styled.section`
   padding-top: 160px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 310px);
+  grid-auto-rows: minmax(310px, auto);
   grid-gap: 30px;
 
   ${media.tablet} {
@@ -34,13 +34,13 @@ export const ServicesItem = styled(Link)`
     }
   }
 
-  &:nth-of-type(1) {
-    grid-row: 1/3;
+  &:nth-of-type(4n+1) {
+    grid-row: span 2;
   }
 
   ${media.tablet} {
-    &:nth-of-type(1) {
-      grid-row: 1/2;
+    &:nth-of-type(4n+1) {
+      grid-row: span 1;
     }
   }
 `;
