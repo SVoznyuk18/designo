@@ -6,17 +6,17 @@ export const AdvantagesSections = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 160px 0 380px;
+  padding: 120px 0 0;
   
   ${media.desktop} {
-    padding: 120px 0 370px;
+    padding: 120px 0 0;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
   }
 
   ${media.mobile} {
-    padding: 120px 0 310px;
+    padding: 120px 0 0;
   }
 `;
 

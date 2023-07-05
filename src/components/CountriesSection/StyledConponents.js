@@ -4,11 +4,7 @@ import {media} from "@/configs/index";
 
 export const Countries = styled.section`
   width: 100%;
-  padding-bottom: 160px;
-
-  ${media.tabletL} {
-    padding-bottom: 120px;
-  }
+  padding: 120px 0 0 ;
 `;
 
 export const CountriesContent = styled.div`

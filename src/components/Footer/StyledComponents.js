@@ -8,12 +8,14 @@ export const FooterSection = styled.footer`
   align-items: center;
   padding: 144px 0px 72px;
   background-color: ${colors.primary_black};
+  margin-top: 380px;
 
   ${media.tablet} {
     padding: 165px 0px 80px;
   }
 
   ${media.mobile} {
+    margin-top: 280px;
     padding: 255px 0px 65px;
   }
 `;

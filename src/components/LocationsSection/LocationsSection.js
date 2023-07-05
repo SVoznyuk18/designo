@@ -1,6 +1,6 @@
 import {LocationCard} from '@/components';
 
-import {Main} from './StyledComponents';
+import {Location} from './StyledComponents';
 
 import canada from "@/public/locations/canada.png";
 import australia from "@/public/locations/australia.png";
@@ -8,7 +8,7 @@ import unitedKingdom from "@/public/locations/unitedKingdom.png";
 
 const LocationsSection = () => {
   return (
-    <Main>
+    <Location>
       <LocationCard
         image={canada}
         alt='img_canada'
@@ -56,7 +56,7 @@ const LocationsSection = () => {
           }
         }
       />
-    </Main>
+    </Location>
   )
 }
 
