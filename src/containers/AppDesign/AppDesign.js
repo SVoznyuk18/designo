@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import MainLayout from "@/layout/MainLayout";
-import {MainSection, Projects} from '@/components';
+import {MainSection, Projects, ServicesSection} from '@/components';
 
 const AppDesign = ({projects}) => {
   return (
@@ -14,6 +14,7 @@ const AppDesign = ({projects}) => {
         to your customers right at their fingertips.'
       />
       <Projects projects={projects}/>
+      <ServicesSection/>
     </MainLayout>
   );
 }
