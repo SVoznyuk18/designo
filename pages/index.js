@@ -2,8 +2,11 @@ import dynamic from "next/dynamic";
 
 const Home = dynamic(() => import('../src/containers/Home/Home'));
 
-export const getStaticProps = async () => {
-  const responseServices = await fetch('http://localhost:3000/api/services');
+export const getServerSideProps = async () => {
+
+  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.PROD_HOST : process.env.DEV_HOST;
+
+  const responseServices = await fetch(`${baseUrl}/api/services`);
 
   const services = await responseServices.json();
 

@@ -2,9 +2,12 @@ import dynamic from "next/dynamic";
 
 const WebDesign = dynamic(() => import('../src/containers/WebDesign/WebDesign'));
 
-export const getStaticProps = async () => {
-    const responseProjects = await fetch('http://localhost:3000/api/webProjects');
-    const responseServices = await fetch('http://localhost:3000/api/services');
+export const getServerSideProps = async () => {
+
+    const baseUrl = process.env.NODE_ENV === 'production' ? process.env.PROD_HOST : process.env.DEV_HOST;
+
+    const responseProjects = await fetch(`${baseUrl}/api/webProjects`);
+    const responseServices = await fetch(`${baseUrl}/api/services`);
     
     const projects = await responseProjects.json();
     const services = await responseServices.json();
