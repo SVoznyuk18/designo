@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
+import dynamic from "next/dynamic";
 
-import MainLayout from "@/layout/MainLayout";
-import {ServicesSection, Advantages, ClassicButton} from '@/components'
+const MainLayout = dynamic(() => import('@/layout/MainLayout'));
+const ServicesSection = dynamic(() => import('../../components/ServicesSection/ServicesSection'), {loading: () => <p>Loading...</p>});
+const Advantages = dynamic(() => import('../../components/Advantages/Advantages'), {loading: () => <p>Loading...</p>});
+import {ClassicButton} from '@/components'
+
 import {
   MainSection, 
   MainContent, 

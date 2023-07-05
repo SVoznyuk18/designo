@@ -1,7 +1,7 @@
-import MainLayout from "@/layout/MainLayout";
+import dynamic from "next/dynamic";
 
-import {LocationsSection} from '@/components';
-import { Container } from '@/styledComponents';
+const MainLayout = dynamic(() => import('@/layout/MainLayout'));
+const LocationsSection = dynamic(() => import('../../components/LocationsSection/LocationsSection'), {loading: () => <p>Loading...</p>});
 
 const Locations = () => {
     return (

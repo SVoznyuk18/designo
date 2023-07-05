@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
+import dynamic from "next/dynamic";
 
-import MainLayout from "@/layout/MainLayout";
-import {MainSection, Projects, ServicesSection} from '@/components';
+const MainLayout = dynamic(() => import('@/layout/MainLayout'));
+const MainSection = dynamic(() => import('../../components/MainSection/MainSection'), {loading: () => <p>Loading...</p>});
+const Projects = dynamic(() => import('../../components/Projects/Projects'), {loading: () => <p>Loading...</p>});
+const ServicesSection = dynamic(() => import('../../components/ServicesSection/ServicesSection'), {loading: () => <p>Loading...</p>});
 
 const GraphicDesign = ({projects, services}) => {
   return (

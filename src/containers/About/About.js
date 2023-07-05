@@ -1,5 +1,10 @@
-import MainLayout from "@/layout/MainLayout";
-import {MainSection, DescriptionTeam, CountriesSection} from '@/components';
+import dynamic from "next/dynamic";
+
+const MainLayout = dynamic(() => import('@/layout/MainLayout'));
+const MainSection = dynamic(() => import('../../components/MainSection/MainSection'), {loading: () => <p>Loading...</p>});
+const DescriptionTeam = dynamic(() => import('../../components/DescriptionTeam/DescriptionTeam'), {loading: () => <p>Loading...</p>});
+const CountriesSection = dynamic(() => import('../../components/CountriesSection/CountriesSection'), {loading: () => <p>Loading...</p>})
+
 
 import about from "@/public/about/about.jpg";
 import talent from "@/public/about/talent.jpg";

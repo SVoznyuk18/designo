@@ -1,4 +1,6 @@
-import {Home} from "@/containers";
+import dynamic from "next/dynamic";
+
+const Home = dynamic(() => import('../src/containers/Home/Home'));
 
 export const getStaticProps = async () => {
   const responseServices = await fetch('http://localhost:3000/api/services');
