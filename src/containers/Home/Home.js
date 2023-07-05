@@ -1,5 +1,6 @@
-import MainLayout from "@/layout/MainLayout";
+import PropTypes from 'prop-types';
 
+import MainLayout from "@/layout/MainLayout";
 import {ServicesSection, Advantages, ClassicButton} from '@/components'
 import {
   MainSection, 
@@ -8,7 +9,7 @@ import {
   SubTitle, 
 } from './StyledComponents';
 
-const Home = () => {
+const Home = ({services}) => {
   return (
     <MainLayout title='Home'>
       <MainSection>
@@ -18,10 +19,20 @@ const Home = () => {
           <ClassicButton variant='light'>Learn More</ClassicButton>
         </MainContent>
       </MainSection>
-      <ServicesSection/>
+      <ServicesSection services={services}/>
       <Advantages/>
     </MainLayout>
   )
+}
+
+Home.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    subTitle: PropTypes.string,
+    src: PropTypes.string,
+    href: PropTypes.string,
+  })).isRequired
 }
 
 export default Home;

@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 
 import {Container} from '@/styledComponents';
 import {
@@ -38,12 +39,10 @@ const services = [
   },
 ]
 
-export const Services = () => {
+export const Services = ({services}) => {
 
   const {pathname} = useRouter();
-
   const currentPage = pathname.slice(1);
-
   const filteredServices = services.filter(service => service.id !== currentPage);
 
   return (
@@ -55,6 +54,7 @@ export const Services = () => {
               <ServicesImage
                 src={service?.src}
                 alt={service?.id}
+                fill
               />
               <Wrapper/>
               <ServicesTitle>{service?.title}</ServicesTitle>
@@ -66,5 +66,15 @@ export const Services = () => {
     </Container>
   );
 };
+
+Services.propTypes = {
+  services: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    subTitle: PropTypes.string,
+    src: PropTypes.string,
+    href: PropTypes.string,
+  })).isRequired
+}
 
 export default Services;

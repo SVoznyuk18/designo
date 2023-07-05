@@ -1,19 +1,22 @@
 import {GraphicDesign} from '@/containers';
 
 export const getStaticProps = async () => {
-    const response = await fetch('http://localhost:3000/api/graphicProjects');
-    const data = await response.json();
+    const responseProjects = await fetch('http://localhost:3000/api/graphicProjects');
+    const responseServices = await fetch('http://localhost:3000/api/services');
+    
+    const projects = await responseProjects.json();
+    const services = await responseServices.json();
 
     return (
         {
-            props: {projects: data}
+            props: {projects, services}
         }
     )
 }
 
-const GraphicDesignPage = ({projects}) => {
+const GraphicDesignPage = ({projects, services}) => {
     return (
-        <GraphicDesign projects={projects}/>
+        <GraphicDesign projects={projects} services={services}/>
     )
 }
 
