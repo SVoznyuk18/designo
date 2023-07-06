@@ -1,4 +1,4 @@
-import {graphicProjectsDB} from './data/graphicProjectsDB';
+import {graphicProjectsDB} from '../data/graphicProjectsDB';
 
 export default function handler(req, res) {
   res.status(200).json(graphicProjectsDB);
