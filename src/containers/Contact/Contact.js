@@ -4,7 +4,8 @@ const MainLayout = dynamic(() => import('@/layout/MainLayout'));
 const Form = dynamic(() => import('../../components/Form/Form'), {loading: () => <p>Loading...</p>});
 const CountriesSection = dynamic(() => import('../../components/CountriesSection/CountriesSection'), {loading: () => <p>Loading...</p>});
 
-import {ContactSection, Title, SubTitle, Info, Wrapper} from './StyledComponents';
+import {ContactSection, Info, Wrapper} from './StyledComponents';
+import {Title, Text} from '@/styledComponents'
 
 const Contact = () => {
   return (
@@ -12,8 +13,13 @@ const Contact = () => {
       <ContactSection>
         <Wrapper>
           <Info>
-            <Title>Contact Us</Title>
-            <SubTitle>Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</SubTitle>
+            <Title marginB='32px' textAlign='left'>Contact Us</Title>
+            <Text 
+              textAlign='left' 
+              marginB='48px'
+            >
+              Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.
+            </Text>
           </Info>
           <Form/>
         </Wrapper>

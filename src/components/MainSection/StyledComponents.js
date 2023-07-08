@@ -28,7 +28,7 @@ export const MainContent = styled.div`
   border-radius: 15px;
   overflow: hidden;
 
-  ${props => props.variant === 'horizontal' && css `
+  ${props => props.variant === 'withImg' && css `
     display: flex;
 
     ${media.tablet} {
@@ -65,7 +65,7 @@ export const Wrapper = styled.div`
     padding: 105px 24px;
   }
 
-  ${props => props.variant === 'horizontal' && css `
+  ${props => props.variant === 'withImg' && css `
     padding: 100px 55px 0px;
     width: 50%;
 
@@ -79,38 +79,4 @@ export const Wrapper = styled.div`
       padding: 80px 24px;
     }
   `}
-`;
-
-export const Title = styled.h1`
-  color: ${colors.primary_white};
-  text-align: center;
-  font-size: 48px;
-  font-weight: 500;
-  line-height: 48px;
-
-  ${props => props.variant === 'horizontal' && css `
-    text-align: start;
-  `}
-
-  ${media.mobile} {
-    font-size: 32px;
-    line-height: 36px;
-  }
-`;
-
-export const SubTitle = styled.h2`
-  color: ${colors.primary_white};
-  font-size: 16px;
-  line-height: 26px;
-  margin-top: 24px;
-  text-align: center;
-
-  ${props => props.variant === 'horizontal' && css `
-    text-align: start;
-  `}
-
-  ${media.mobile} {
-    font-size: 15px;
-    line-height: 25px;
-  }
 `;

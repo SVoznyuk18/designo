@@ -1,13 +1,23 @@
 import Image from "next/image";
 import PropTypes from 'prop-types';
 
-import {Card, WrapperInfo, Title, ContactsSection, Contact, ContactTitle, WrapperImage} from './StyledComponents';
+import {colors} from "@/configs/index";
+import {Card, WrapperInfo, ContactsSection, Contact, ContactTitle,  WrapperImage} from './StyledComponents';
+import { Title } from '@/styledComponents'
 
 const LocationCard = ({image, alt, title, location, variant}) => {
-return (
+  return (
     <Card>
       <WrapperInfo variant={variant}>
-        <Title>{title}</Title>
+        <Title 
+          as='h2' 
+          textAlign='left' 
+          marginB='24px' 
+          color={colors.primary_peach} 
+          locationTitle
+        >
+          {title}
+        </Title>
         <ContactsSection >
           <Contact>
             <ContactTitle>{location.adressTitle}</ContactTitle>

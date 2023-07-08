@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import { media, colors } from '@/configs/index';
+import { media } from '@/configs/index';
 
 export const AdvantagesSections = styled.section`
   display: flex;
@@ -45,7 +45,15 @@ export const Advantage = styled.div`
 `;
 
 export const AdvantageImage = styled(Image)`
+  margin-bottom: 48px;
 
+  ${media.desktop} {
+    margin-bottom: 0px;
+  }
+
+  ${media.mobile} {
+    margin-bottom: 48px;
+  }
 `;
 
 export const AdvantageInfo = styled.div`
@@ -64,42 +72,5 @@ export const AdvantageInfo = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-  }
-`;
-
-export const AdvantageTitle = styled.h3`
-  margin-top: 48px;
-  color: ${colors.secondary_dark};
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 26px;
-  letter-spacing: 5px;
-
-  ${media.desktop} {
-    margin-top: 0px;
-    text-align: start;
-  }
-
-  ${media.mobile} {
-    margin-top: 48px;
-    text-align: center;
-  }
-`;
-
-export const AdvantageDescr = styled.h4`
-  max-width: 440px;
-  margin-top: 32px;
-  color: ${colors.secondary_dark};
-  text-align: center;
-  font-size: 16px;
-  line-height: 26px;
-
-  ${media.desktop} {
-    text-align: start;
-  }
-
-  ${media.mobile} {
-    text-align: center;
   }
 `;

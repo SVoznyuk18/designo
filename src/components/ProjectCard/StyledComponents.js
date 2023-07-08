@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-
+import Link from 'next/link';
 import {media, colors} from "@/configs/index";
 
-export const Card = styled.div`
+export const Card = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,6 +18,18 @@ export const Card = styled.div`
     flex-direction: column;
     justify-content: center;
     height: auto;
+  }
+
+  &:hover {
+    div {
+      background-color: ${colors.primary_peach};
+    }
+    h3 {
+      color: ${colors.primary_white};
+    }
+    p {
+      color: ${colors.primary_white};
+    }
   }
 `;
 
@@ -47,41 +59,11 @@ export const CardInfoSection = styled.div`
   width: auto;
   background-color: ${colors.secondary_light_peach};
 
-  &:hover {
-    background-color: ${colors.primary_peach};
-
-    h3 {
-      color: ${colors.primary_white};
-    }
-
-    p {
-      color: ${colors.primary_white};
-    }
+  ${media.tablet} {
+    padding: 108px 10px;
   }
 
   ${media.tablet} {
-    padding: 108px 0 108px;
+    padding: 32px 10px;
   }
-
-  ${media.tablet} {
-    padding: 32px 0 32px;
-  }
-`;
-
-
-export const CardTitle = styled.h3`
-  margin-bottom: 16px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 26px;
-  letter-spacing: 5px;
-  color: ${colors.primary_peach};
-`;
-
-export const CardDescr = styled.p`
-  text-align: center;
-  font-size: 16px;
-  line-height: 26px;
-  color: ${colors.secondary_dark};
 `;

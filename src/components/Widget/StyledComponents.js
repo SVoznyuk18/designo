@@ -52,29 +52,3 @@ export const InfoWrapper = styled.div`
     align-items: center;
   }
 `;
-
-export const WidgetTitle = styled.h2`
-  color: ${colors.primary_white};
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 40px;
-  max-width: 270px;
-  margin-bottom: 20px;
-
-  ${media.desktop} {
-    text-align: center;
-  }
-`;
-
-export const WidgetSubTitle = styled.h3`
-  color: ${colors.primary_white};
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  max-width: 460px;
-
-  ${media.desktop} {
-    text-align: center;
-    margin-bottom: 32px;
-  }
-`;
