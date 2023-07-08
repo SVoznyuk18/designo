@@ -61,19 +61,3 @@ export const Title = styled.h1`
     line-height: 36px;
   }
 `;
-
-export const SubTitle = styled.h2`
-  max-width: 450px;
-  color: #FFF;
-  font-size: 16px;
-  line-height: 26px;
-  margin-bottom: 40px;
-  
-  ${media.tablet} {
-    text-align: center;
-  }
-  ${media.mobile} {
-    font-size: 15px;
-    line-height: 25px;
-  }
-`;

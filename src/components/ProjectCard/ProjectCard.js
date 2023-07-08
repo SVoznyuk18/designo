@@ -2,8 +2,10 @@ import Image from "next/image";
 import PropTypes from 'prop-types';
 import { useRouter } from "next/router";
 
-import { Card, ImageWrapper, CardInfoSection, CardDescr} from './StyledComponents';
-import {Title} from '@/styledComponents'
+import {colors} from "@/configs/index";
+import { Card, ImageWrapper, CardInfoSection} from './StyledComponents';
+import {Title, Text} from '@/styledComponents';
+
 const ProjectCard = ({project}) => {
 
   const {pathname} = useRouter();
@@ -22,7 +24,7 @@ const ProjectCard = ({project}) => {
       </ImageWrapper>
       <CardInfoSection>
       <Title as='h3' projectCardTitle marginB='16px'>{project?.title}</Title>
-      <CardDescr>{project?.descr}</CardDescr>
+      <Text color={colors.secondary_dark}>{project?.descr}</Text>
       </CardInfoSection>
     </Card>
   )

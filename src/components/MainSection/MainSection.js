@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import {Main, MainContent, Wrapper, WrapperImage, SubTitle} from './StyledComponents';
 
-import {Title} from '@/styledComponents'
+import {Main, MainContent, Wrapper, WrapperImage, SubTitle} from './StyledComponents';
+import {Title, Text} from '@/styledComponents'
 
 const MainSection = ({title, image, alt, subTitle, variant}) => {
   return (
@@ -12,7 +12,7 @@ const MainSection = ({title, image, alt, subTitle, variant}) => {
           <MainContent variant={variant}>
             <Wrapper variant={variant}>
               <Title textAlign='left' marginB='30px'>{title}</Title>
-              <SubTitle variant={variant}>{subTitle}</SubTitle>
+              <Text fontSize='16px' textAlign='left' >{subTitle}</Text>
             </Wrapper>
             <WrapperImage>
               <Image
@@ -30,8 +30,8 @@ const MainSection = ({title, image, alt, subTitle, variant}) => {
         <Otherwise>
           <MainContent>
             <Wrapper>
-              <Title>{title}</Title>
-              <SubTitle>{subTitle}</SubTitle>
+              <Title marginB='30px' >{title}</Title>
+              <Text fontSize='16px'>{subTitle}</Text>
             </Wrapper>
           </MainContent>  
         </Otherwise>

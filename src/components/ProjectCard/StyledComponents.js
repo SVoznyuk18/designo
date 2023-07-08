@@ -67,10 +67,3 @@ export const CardInfoSection = styled.div`
     padding: 32px 10px;
   }
 `;
-
-export const CardDescr = styled.p`
-  text-align: center;
-  font-size: 16px;
-  line-height: 26px;
-  color: ${colors.secondary_dark};
-`;

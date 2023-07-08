@@ -1,15 +1,16 @@
 import Image from "next/image";
 import PropTypes from 'prop-types';
 
-import {DescriptionSection, MainContent, Wrapper, Title, SubTitle, WrapperImage} from './StyledComponents';
-
+import { colors } from '@/configs/index';
+import {DescriptionSection, MainContent, Wrapper, WrapperImage} from './StyledComponents';
+import {Title, Text} from '@/styledComponents'
 const DescriptionTeam = ({title, subTitle, image, alt, variant}) => {
   return (
     <DescriptionSection>
       <MainContent>
         <Wrapper variant={variant}>
-          <Title>{title}</Title>
-          <SubTitle>{subTitle}</SubTitle>
+          <Title marginB='30px' color={colors.primary_peach}>{title}</Title>
+          <Text color={colors.secondary_dark}>{subTitle}</Text>
         </Wrapper>
         <WrapperImage variant={variant}>
           <Image

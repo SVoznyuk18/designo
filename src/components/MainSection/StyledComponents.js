@@ -80,20 +80,3 @@ export const Wrapper = styled.div`
     }
   `}
 `;
-
-export const SubTitle = styled.h2`
-  color: ${colors.primary_white};
-  font-size: 16px;
-  line-height: 26px;
-  margin-top: 24px;
-  text-align: center;
-
-  ${props => props.variant === 'withImg' && css `
-    text-align: start;
-  `}
-
-  ${media.mobile} {
-    font-size: 15px;
-    line-height: 25px;
-  }
-`;

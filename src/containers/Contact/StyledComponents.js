@@ -56,24 +56,3 @@ export const Info = styled.div`
     width: 100%;
   }
 `;
-
-export const Title = styled.h1`
-  margin-bottom: 32px;
-  color: ${colors.primary_white};
-  font-size: 48px;
-  font-weight: 500;
-  line-height: 48px;
-
- 
-`;
-
-export const SubTitle = styled.h2`
-  color: ${colors.primary_white};
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-
-  ${media.desktop} {
-    margin-bottom: 48px;
-  }
-`; 

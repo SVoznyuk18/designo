@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PropTypes from 'prop-types';
 
+import {colors} from "@/configs/index";
 import {ClassicButton} from '@/components'
 import {Card} from './StyledComponents';
 import {Title} from '@/styledComponents'
@@ -15,7 +16,14 @@ const CountryCard = ({image, alt, title, btnTitle}) => {
         height={200}
         style={{marginBottom: '45px'}}
       />
-      <Title as='h3' coutryCardTitle marginB='30px'>{title}</Title>
+      <Title 
+        as='h3' 
+        coutryCardTitle 
+        marginB='30px' 
+        color={colors.secondary_dark}
+      >
+        {title}
+      </Title>
       <ClassicButton variant='peach'>{btnTitle}</ClassicButton>
     </Card>
   )
