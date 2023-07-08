@@ -56,18 +56,6 @@ export const WrapperInfo = styled.div`
   }
 `;
 
-export const Title = styled.h2`
-  color: ${colors.primary_peach};
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 48px;
-  margin-bottom: 24px;
-
-  ${media.mobile} {
-    text-align: center;
-  }
-`;
-
 export const ContactsSection = styled.div`
   display: flex;
   justify-content: space-between;

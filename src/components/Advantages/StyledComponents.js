@@ -45,7 +45,15 @@ export const Advantage = styled.div`
 `;
 
 export const AdvantageImage = styled(Image)`
+  margin-bottom: 48px;
 
+  ${media.desktop} {
+    margin-bottom: 0px;
+  }
+
+  ${media.mobile} {
+    margin-bottom: 48px;
+  }
 `;
 
 export const AdvantageInfo = styled.div`
@@ -64,26 +72,6 @@ export const AdvantageInfo = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-  }
-`;
-
-export const AdvantageTitle = styled.h3`
-  margin-top: 48px;
-  color: ${colors.secondary_dark};
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 26px;
-  letter-spacing: 5px;
-
-  ${media.desktop} {
-    margin-top: 0px;
-    text-align: start;
-  }
-
-  ${media.mobile} {
-    margin-top: 48px;
-    text-align: center;
   }
 `;
 

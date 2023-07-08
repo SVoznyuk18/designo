@@ -53,19 +53,6 @@ export const InfoWrapper = styled.div`
   }
 `;
 
-export const WidgetTitle = styled.h2`
-  color: ${colors.primary_white};
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 40px;
-  max-width: 270px;
-  margin-bottom: 20px;
-
-  ${media.desktop} {
-    text-align: center;
-  }
-`;
-
 export const WidgetSubTitle = styled.h3`
   color: ${colors.primary_white};
   font-size: 16px;

@@ -11,7 +11,7 @@ const WebDesign = ({projects, services}) => {
     <MainLayout title='Web Design'>
       <MainSection
         title='Web Design'
-        subtitle='We build websites that serve as powerful marketing tools <br/>and bring memorable brand experiences.'
+        subTitle='We build websites that serve as powerful marketing tools <br/>and bring memorable brand experiences.'
       />
       <Projects projects={projects}/>
       <ServicesSection services={services}/>

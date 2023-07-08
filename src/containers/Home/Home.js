@@ -5,11 +5,12 @@ const MainLayout = dynamic(() => import('@/layout/MainLayout'));
 const ServicesSection = dynamic(() => import('../../components/ServicesSection/ServicesSection'), {loading: () => <p>Loading...</p>});
 const Advantages = dynamic(() => import('../../components/Advantages/Advantages'), {loading: () => <p>Loading...</p>});
 import {ClassicButton} from '@/components'
+import {Title} from '@/styledComponents'
 
 import {
   MainSection, 
   MainContent, 
-  Title, 
+  // Title, 
   SubTitle, 
 } from './StyledComponents';
 
@@ -18,7 +19,7 @@ const Home = ({services}) => {
     <MainLayout title='Home'>
       <MainSection>
         <MainContent>
-          <Title>Award-winning custom designs and digital branding solutions</Title>
+          <Title textAlign='left' marginB='30px' width="540px">Award-winning custom designs and digital branding solutions</Title>
           <SubTitle>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</SubTitle>
           <ClassicButton variant='light'>Learn More</ClassicButton>
         </MainContent>

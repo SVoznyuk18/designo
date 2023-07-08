@@ -1,30 +1,27 @@
 import Image from "next/image";
-import Link from "next/link";
 import PropTypes from 'prop-types';
 import { useRouter } from "next/router";
 
-import { Card, ImageWrapper, CardInfoSection, CardTitle, CardDescr} from './StyledComponents';
-
+import { Card, ImageWrapper, CardInfoSection, CardDescr} from './StyledComponents';
+import {Title} from '@/styledComponents'
 const ProjectCard = ({project}) => {
 
   const {pathname} = useRouter();
 
   return (
-    <Card>
-      <Link href={`${pathname}/${project?.page}`}>
-        <ImageWrapper >
-          <Image
-            src={project?.image}
-            alt={project?.title}
-            fill={true}
-            style={{objectFit: "cover"}}
-            placeholder='blur'
-            blurDataURL='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8v3Z2PQAHwgLItQaUHgAAAABJRU5ErkJggg=='
-          />
-        </ImageWrapper>
-      </Link>
+    <Card href={`${pathname}/${project?.page}`}>
+      <ImageWrapper >
+        <Image
+          src={project?.image}
+          alt={project?.title}
+          fill={true}
+          style={{objectFit: "cover"}}
+          placeholder='blur'
+          blurDataURL='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8v3Z2PQAHwgLItQaUHgAAAABJRU5ErkJggg=='
+        />
+      </ImageWrapper>
       <CardInfoSection>
-      <CardTitle>{project?.title}</CardTitle>
+      <Title as='h3' projectCardTitle marginB='16px'>{project?.title}</Title>
       <CardDescr>{project?.descr}</CardDescr>
       </CardInfoSection>
     </Card>

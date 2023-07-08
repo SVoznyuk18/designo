@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import {Main, MainContent, Wrapper, WrapperImage, Title, SubTitle} from './StyledComponents';
+import {Main, MainContent, Wrapper, WrapperImage, SubTitle} from './StyledComponents';
+
+import {Title} from '@/styledComponents'
 
 const MainSection = ({title, image, alt, subTitle, variant}) => {
   return (
     <Main>
       <Choose>
-        <When condition={variant === 'horizontal'}>
-          <MainContent variant='horizontal'>
-          <Wrapper variant='horizontal'>
-              <Title variant='horizontal'>{title}</Title>
-              <SubTitle variant='horizontal'>{subTitle}</SubTitle>
+        <When condition={variant === 'withImg'}>
+          <MainContent variant={variant}>
+            <Wrapper variant={variant}>
+              <Title textAlign='left' marginB='30px'>{title}</Title>
+              <SubTitle variant={variant}>{subTitle}</SubTitle>
             </Wrapper>
             <WrapperImage>
               <Image
