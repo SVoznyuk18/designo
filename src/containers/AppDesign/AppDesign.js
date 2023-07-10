@@ -1,16 +1,13 @@
 import PropTypes from 'prop-types';
 import dynamic from "next/dynamic";
 
-const MainLayout = dynamic(() => import('@/layout/MainLayout'));
 const MainSection = dynamic(() => import('../../components/MainSection/MainSection'), {loading: () => <p>Loading...</p>});
 const Projects = dynamic(() => import('../../components/Projects/Projects'), {loading: () => <p>Loading...</p>});
 const ServicesSection = dynamic(() => import('../../components/ServicesSection/ServicesSection'), {loading: () => <p>Loading...</p>});
 
 const AppDesign = ({projects, services}) => {
   return (
-    <MainLayout
-      title='App Design'
-    >
+    <>
       <MainSection
         title='App Design'
         subTitle='Our mobile designs bring intuitive digital solutions <br>
@@ -18,7 +15,7 @@ const AppDesign = ({projects, services}) => {
       />
       <Projects projects={projects}/>
       <ServicesSection services={services}/>
-    </MainLayout>
+    </>
   );
 }
 
