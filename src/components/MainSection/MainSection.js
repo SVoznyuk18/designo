@@ -24,7 +24,6 @@ const MainSection = ({title, image, alt, subTitle, variant}) => {
                 blurDataURL='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8v3Z2PQAHwgLItQaUHgAAAABJRU5ErkJggg=='
               />
             </WrapperImage>
-          
           </MainContent>  
         </When>
         <Otherwise>

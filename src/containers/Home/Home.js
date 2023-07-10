@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import dynamic from "next/dynamic";
 
-const MainLayout = dynamic(() => import('@/layout/MainLayout'));
 const ServicesSection = dynamic(() => import('../../components/ServicesSection/ServicesSection'), {loading: () => <p>Loading...</p>});
 const Advantages = dynamic(() => import('../../components/Advantages/Advantages'), {loading: () => <p>Loading...</p>});
 import {ClassicButton} from '@/components'
@@ -13,7 +12,7 @@ import {
 
 const Home = ({services}) => {
   return (
-    <MainLayout title='Home'>
+    <>
       <MainSection>
         <MainContent>
           <Title
@@ -36,7 +35,7 @@ const Home = ({services}) => {
       </MainSection>
       <ServicesSection services={services}/>
       <Advantages/>
-    </MainLayout>
+    </>
   )
 }
 

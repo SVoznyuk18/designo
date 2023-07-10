@@ -1,10 +1,8 @@
 import dynamic from "next/dynamic";
 
-const MainLayout = dynamic(() => import('@/layout/MainLayout'));
 const MainSection = dynamic(() => import('../../components/MainSection/MainSection'), {loading: () => <p>Loading...</p>});
 const DescriptionTeam = dynamic(() => import('../../components/DescriptionTeam/DescriptionTeam'), {loading: () => <p>Loading...</p>});
 const CountriesSection = dynamic(() => import('../../components/CountriesSection/CountriesSection'), {loading: () => <p>Loading...</p>})
-
 
 import about from "@/public/about/about.jpg";
 import talent from "@/public/about/talent.jpg";
@@ -12,9 +10,7 @@ import deal from "@/public/about/deal.jpg";
 
 const About = () => {
   return (
-    <MainLayout
-      title='About'
-    >
+    <>
       <MainSection
         title='About Us'
         subTitle='Founded in 2010, we are a creative agency that produces lasting results for our clients. We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We’re always looking forward to creating brands, products, and digital experiences that connect with our clients’ audiences.'
@@ -40,7 +36,7 @@ const About = () => {
         image={deal}
         alt='image_deal'
       />
-    </MainLayout>
+    </>
   );
 }
 

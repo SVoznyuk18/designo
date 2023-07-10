@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 
-const MainLayout = dynamic(() => import('@/layout/MainLayout'));
 const Form = dynamic(() => import('../../components/Form/Form'), {loading: () => <p>Loading...</p>});
 const CountriesSection = dynamic(() => import('../../components/CountriesSection/CountriesSection'), {loading: () => <p>Loading...</p>});
 
@@ -9,7 +8,7 @@ import {Title, Text} from '@/styledComponents'
 
 const Contact = () => {
   return (
-    <MainLayout>
+    <>
       <ContactSection>
         <Wrapper>
           <Info>
@@ -25,7 +24,7 @@ const Contact = () => {
         </Wrapper>
       </ContactSection>
       <CountriesSection/>
-    </MainLayout>
+    </>
   )
 }
 
